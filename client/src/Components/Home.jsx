@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
+import React from "react";
 
-function Home() {
+const Home = () =>{
     return (
         <motion.div
             className="page-container"
