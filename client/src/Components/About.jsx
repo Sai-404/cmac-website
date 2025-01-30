@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 
-function About() {
+const About = () => {
     return (
         <motion.div
             className="page-container"

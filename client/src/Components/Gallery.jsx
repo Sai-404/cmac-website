@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 
-function Gallery() {
+const Gallery = ()  => {
     const images = [
         "https://via.placeholder.com/200",
         "https://via.placeholder.com/200",
