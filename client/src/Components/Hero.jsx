@@ -1,56 +1,84 @@
 import React from 'react';
-
-const DecorativeSquares = ({ position }) => {
-  // Array of squares with different colors
-  const squares = [
-    { color: 'bg-white border border-gray-200', size: 'w-12 h-12' },
-    { color: 'bg-green-400', size: 'w-12 h-12' },
-    { color: 'bg-yellow-400', size: 'w-12 h-12' },
-  ];
-
-  return (
-    <div className={`absolute ${position} grid grid-cols-3 gap-2 opacity-80`}>
-      {squares.map((square, index) => (
-        <div
-          key={index}
-          className={`rounded-lg ${square.color} ${square.size} transform transition-transform`}
-        ></div>
-      ))}
-      <div className="col-span-3 grid grid-cols-3 gap-2">
-        {Array(6).fill().map((_, index) => (
-          <div
-            key={`sub-${index}`}
-            className="w-12 h-12 rounded-lg bg-white border border-gray-200"
-          ></div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 overflow-hidden">
-      {/* Decorative Squares */}
-      <DecorativeSquares position="left-10 top-40" />
-      <DecorativeSquares position="right-10 bottom-40" />
+    <div className="bg-gradient-to-r from-beige-100 to-beige-200 py-20 px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* Animated Title */}
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl font-bold text-gray-800 mb-6"
+        >
+          Welcome to <span className="text-blue-600">CMAC</span>
+        </motion.h1>
 
-      {/* Main Content */}
-      <div className="text-center max-w-5xl mx-auto z-10">
-        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
-          Lorem ipsum dolor sit amet <br />
-          <br />
-          consectetur adipiscing elit
-        </h1>
-        
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
-          Invest in 1,000+ equities for real-time 
-          insights and tailored reporting
-        </p>
+        {/* Animated Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-xl text-gray-600 mb-8"
+        >
+          Where <span className="font-semibold">Innovation</span> Meets <span className="font-semibold">Excellence</span>
+        </motion.p>
 
-        <button className="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors">
-          Get Started
-        </button>
+        {/* Animated Description */}
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-lg text-gray-700 mb-12"
+        >
+          Join SRMIST's premier council for Mathematics and Advanced Computing. Dive into the world of{' '}
+          <span className="font-semibold">Machine Learning</span>, <span className="font-semibold">Data Science</span>,{' '}
+          <span className="font-semibold">Artificial Intelligence</span>, and{' '}
+          <span className="font-semibold">Emerging Technologies</span> with us.
+        </motion.p>
+
+        {/* Animated Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="flex justify-center space-x-4"
+        >
+          <a
+            href="#join"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+          >
+            Join Us
+          </a>
+          <a
+            href="#learn-more"
+            className="bg-transparent border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300"
+          >
+            Learn More
+          </a>
+        </motion.div>
+
+        {/* Animated Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">Workshops & Hackathons</h3>
+            <p className="text-gray-600">Hands-on learning experiences to sharpen your skills.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">Technical Sessions</h3>
+            <p className="text-gray-600">Learn from experts and industry leaders.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">Collaborations</h3>
+            <p className="text-gray-600">Work with IITs, NITs, and top industry professionals.</p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
