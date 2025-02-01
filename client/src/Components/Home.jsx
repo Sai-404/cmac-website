@@ -5,6 +5,7 @@ import Hero from "./Hero.jsx";
 import '../index.css';
 import Footer from "./Footer.jsx";
 import WhatsApp from "./WhatsApp.jsx";
+import Numbers from "./Numbers.jsx";
 
 const Home = () => {
   return (
