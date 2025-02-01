@@ -12,6 +12,7 @@ const Home = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <Header/>
         <Hero/>
+        <Numbers/>
         <div className="my-8">
           <WhatsApp/>
         </div>
