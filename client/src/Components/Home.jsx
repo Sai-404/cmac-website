@@ -7,6 +7,7 @@ import Footer from "./Footer.jsx";
 import WhatsApp from "./WhatsApp.jsx";
 import Numbers from "./Numbers.jsx";
 import Features from "./Features.jsx";
+import Testimonials from "./Testimonials.jsx";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Hero/>
         <Numbers/>
         <Features/>
+        <Testimonials/>
         <div className="my-8">
           <WhatsApp/>
         </div>
