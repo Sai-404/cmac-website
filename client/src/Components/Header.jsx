@@ -23,8 +23,10 @@ const Header = () => {
 
   return (
     <header 
-      className={`w-full py-4 fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-white shadow-sm" : "bg-white shadow-sm"
+      className={`w-full py-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-white shadow-md" 
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center">
@@ -33,7 +35,7 @@ const Header = () => {
           <h1 className="text-xl font-semibold">
             <button
               onClick={scrollToTop}
-              className="text-black focus:outline-none"
+              className="text-black hover:text-gray-700 focus:outline-none transition-colors duration-200"
             >
               CMAC
             </button>
@@ -42,25 +44,23 @@ const Header = () => {
 
         {/* Centered Navigation */}
         <nav className="flex-1 flex justify-center space-x-8">
-          <a href="#demo" className="text-black hover:text-gray-600">
+          <a href="#demo" className="text-black hover:text-gray-600 transition-colors duration-200">
             Demo
           </a>
-          <a href="#features" className="text-black hover:text-gray-600">
+          <a href="#features" className="text-black hover:text-gray-600 transition-colors duration-200">
             Features
           </a>
-          <a href="#product" className="text-black hover:text-gray-600">
+          <a href="#product" className="text-black hover:text-gray-600 transition-colors duration-200">
             Product
           </a>
-          <a href="#about" className="text-black hover:text-gray-600">
+          <a href="#about" className="text-black hover:text-gray-600 transition-colors duration-200">
             About
           </a>
         </nav>
         
         {/* Login Button - Right Side */}
         <div className="flex-1 flex justify-end">
-          <button className={`px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 ${
-            "bg-white"
-          }`}>
+          <button className="px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
             Log in
           </button>
         </div>
@@ -70,7 +70,5 @@ const Header = () => {
 };
 
 export default Header;
-
-
   
 
