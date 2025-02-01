@@ -6,6 +6,7 @@ import '../index.css';
 import Footer from "./Footer.jsx";
 import WhatsApp from "./WhatsApp.jsx";
 import Numbers from "./Numbers.jsx";
+import Features from "./Features.jsx";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Header/>
         <Hero/>
         <Numbers/>
+        <Features/>
         <div className="my-8">
           <WhatsApp/>
         </div>
