@@ -8,6 +8,9 @@ import WhatsApp from "./WhatsApp.jsx";
 import Numbers from "./Numbers.jsx";
 import Features from "./Features.jsx";
 import Testimonials from "./Testimonials.jsx";
+import S1 from "./s1.jsx";
+import S2 from "./s2.jsx";
+import Blogs from "./Blogs.jsx";
 
 const Home = () => {
   return (
@@ -17,7 +20,10 @@ const Home = () => {
         <Hero/>
         <Numbers/>
         <Features/>
+        <S1/>
+        <S2/>
         <Testimonials/>
+        <Blogs/>
         <div className="my-8">
           <WhatsApp/>
         </div>
