@@ -1,0 +1,70 @@
+/* Tailwind Base Configurations */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Customizations */
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #fdf6e9; /* Light cream background */
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(
+      90deg,
+      #f92545,
+      #d91534
+    ); /* Gradient based on primary red */
+  }
+
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(249, 37, 69, 0.1); /* Shadow with primary red */
+  }
+
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(249, 37, 69, 0.1); /* Shadow with primary red */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-[#f92545] text-white px-6 py-3 rounded-lg shadow hover:bg-[#d91534] transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-[#f2eddb] text-gray-900 px-6 py-3 rounded-lg shadow hover:bg-[#e8e1c7] transition-colors;
+  }
+}
+
+/* Custom color utilities */
+.bg-primary-cream {
+  background-color: #f2eddb;
+}
+
+.bg-primary-red {
+  background-color: #f92545;
+}
+
+.text-primary-cream {
+  color: #f2eddb;
+}
+
+.text-primary-red {
+  color: #f92545;
+}
+
+.border-primary-cream {
+  border-color: #f2eddb;
+}
+
+.border-primary-red {
+  border-color: #f92545;
+}

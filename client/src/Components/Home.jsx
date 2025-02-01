@@ -4,14 +4,20 @@ import Header from "./Header.jsx";
 import Hero from "./Hero.jsx";
 import '../index.css';
 import Footer from "./Footer.jsx";
+import WhatsApp from "./WhatsApp.jsx";
 
 const Home = () => {
   return (
-   <div className="w-screen min-h-screen bg-gray-100">
-    <Header/>
-    <Hero/>
-    <Footer/>
-   </div>
+    <div className="relative w-full min-h-screen bg-gray-100 overflow-x-hidden">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <Header/>
+        <Hero/>
+        <div className="my-8">
+          <WhatsApp/>
+        </div>
+        <Footer/>
+      </div>
+    </div>
   );
 };
 
