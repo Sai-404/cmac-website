@@ -8,8 +8,8 @@ import WhatsApp from "./WhatsApp.jsx";
 import Numbers from "./Numbers.jsx";
 import Features from "./Features.jsx";
 import Testimonials from "./Testimonials.jsx";
-import S1 from "./s1.jsx";
-import S2 from "./s2.jsx";
+import S1 from "./S1.jsx";
+import S2 from "./S2.jsx";
 import Blogs from "./Blogs.jsx";
 
 const Home = () => {
