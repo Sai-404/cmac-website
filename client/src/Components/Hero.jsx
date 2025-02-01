@@ -11,17 +11,17 @@ const Hero = () => {
         {/* Label */}
         <div className="flex items-center justify-center gap-2 text-emerald-600 mb-6">
           <Sparkles size={16} />
-          <span className="text-sm font-medium tracking-wider uppercase">Modern and Scaleable</span>
+          <span className="text-sm font-medium tracking-wider uppercase">CMAC – The Future of Mathematical Computing</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Comprehensive CRM<br />Tools for Your Team
+           Empowering Minds <br />Powering Innovation
         </h1>
 
         {/* Subheading */}
         <p className="text-gray-600 text-xl max-w-3xl mx-auto mb-12">
-          Experience the perfect blend of power and simplicity. Connect your data, teams, and customers with our AI-driven CRM platform that scales with your business.
+        The Council for Mathematics and Advanced Computing (CMAC) is a hub for intellectual growth, research, and technological breakthroughs. Join us in shaping the future.
         </p>
 
         {/* Buttons */}
