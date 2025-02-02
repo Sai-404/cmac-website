@@ -3,14 +3,14 @@ import { Sparkles } from 'lucide-react';
 
 const WhatsApp = () => {
   return (
-    <div className="bg-[#0A1A1F] w-full rounded-3xl p-4 sm:p-8 md:p-16">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-2 text-emerald-400 mb-6">
+    <div className="bg-[#0A1A1F] w-full rounded-3xl p-4 sm:p-8 md:p-16 flex items-center justify-center">
+      <div className="max-w-6xl w-full">
+        <div className="flex items-center justify-center gap-2 text-emerald-400 mb-6">
           <Sparkles size={16} className="text-emerald-400" />
           <span className="text-sm font-medium tracking-wider uppercase">Join the best</span>
         </div>
         
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-start gap-8">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight">
             The Best Club of<br />
             SRM IST Chennai
