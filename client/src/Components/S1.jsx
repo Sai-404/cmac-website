@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
 
-const S1 = () => {
+const CombinedSection = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
   const integrationIcons = [
     { name: 'Slack', icon: '🔲' },
     { name: 'Notion', icon: '🔲' },
@@ -35,50 +37,65 @@ const S1 = () => {
   ];
 
   return (
-    <div className="bg-emerald-950 min-h-screen p-8 text-white font-sans rounded-2xl">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-emerald-400 mb-4 text-sm tracking-wide">MODERN AND SCALEABLE</p>
-          <h1 className="text-5xl font-normal mb-4 tracking-tight">Scale, flex, and innovate</h1>
-          <p className="text-gray-300 font-light">Built for everyone, our platform reduces operational complexities.</p>
-        </div>
+    <div className="p-6 space-y-12">
+      {/* Header Section */}
+      <div className="text-center">
+        <h2 className="text-sm font-semibold tracking-wide uppercase text-blue-600">
+          MODERN AND SCALEABLE
+        </h2>
+        <h3 className="mt-2 text-3xl font-bold">
+          Scale, flex, and innovate
+        </h3>
+        <p className="mt-4 text-gray-600">
+          Built for everyone, our platform reduces operational complexities.
+        </p>
+      </div>
 
-        <div className="bg-[#f2ffe6] text-emerald-950 rounded-3xl mb-8">
-          <div className="p-8">
-            <div className="flex justify-between items-start gap-12">
-              <div className="max-w-md">
-                <h2 className="text-3xl font-normal mb-4 tracking-tight text-[#1a322b]">Integrates with tools</h2>
-                <p className="text-gray-600 mb-6 font-light">
-                  Seamlessly connect the databases and applications you rely on to scale your business.
-                </p>
-                <button className="bg-emerald-950 text-white px-6 py-3 rounded-full inline-flex items-center text-sm">
-                  Explore
-                  <span className="ml-2">→</span>
-                </button>
-              </div>
-              <div className="grid grid-cols-4 gap-3 flex-1">
-                {integrationIcons.map((tool, index) => (
-                  <div key={index} className="bg-white p-3 rounded-2xl shadow-sm flex items-center justify-center" style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
-                    <span className="text-2xl">{tool.icon}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+      {/* Integration Section */}
+      <div className="bg-gray-50 rounded-2xl p-8">
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-bold">
+            Integrates with tools
+          </h3>
+          <p className="mt-4 text-gray-600">
+            Seamlessly connect the databases and applications you rely on to scale your business.
+          </p>
+          <button className="mt-4 inline-flex items-center text-blue-600 font-medium">
+            Explore <span className="ml-2">→</span>
+          </button>
         </div>
-
-        <div className="grid grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-emerald-900/50 p-8 rounded-2xl backdrop-blur-sm">
-              <span className="text-3xl mb-4 block">{feature.icon}</span>
-              <h3 className="text-xl font-normal mb-3">{feature.title}</h3>
-              <p className="text-gray-300 font-light text-sm leading-relaxed">{feature.description}</p>
+        
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-4">
+          {integrationIcons.map((tool, index) => (
+            <div key={index} className="flex items-center justify-center p-2 text-2xl">
+              {tool.icon}
             </div>
           ))}
         </div>
       </div>
+
+      {/* Feature Tabs */}
+      <div className="flex flex-col md:flex-row gap-4">
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            onClick={() => setActiveTab(index)}
+            className={`p-6 rounded-lg cursor-pointer transition-all duration-200 ${
+              activeTab === index 
+                ? 'bg-gray-800 text-white' 
+                : 'bg-gray-100 hover:bg-gray-200'
+            }`}
+          >
+            <div className="text-3xl mb-3">{feature.icon}</div>
+            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+            <p className={activeTab === index ? 'text-gray-200' : 'text-gray-600'}>
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
-export default S1;
+export default CombinedSection;
