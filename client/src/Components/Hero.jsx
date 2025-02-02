@@ -1,8 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 
-
+// Import logos
+import srmLogo from '../assets/srmlogo.png';
+import iitbLogo from '../assets/IITBOMBAY.png';
+import iitpkdLogo from '../assets/IITPKD.png';
+import nitrLogo from '../assets/NIT_Rourkela_Colour_Logo.png';
 
 const Hero = () => {
   return (
@@ -16,12 +19,12 @@ const Hero = () => {
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-           Empowering Minds <br />Powering Innovation
+          Empowering Minds <br />Powering Innovation
         </h1>
 
         {/* Subheading */}
         <p className="text-gray-600 text-xl max-w-3xl mx-auto mb-12">
-        The Council for Mathematics and Advanced Computing (CMAC) is a hub for intellectual growth, research, and technological breakthroughs. Join us in shaping the future.
+          The Council for Mathematics and Advanced Computing (CMAC) is a hub for intellectual growth, research, and technological breakthroughs. Join us in shaping the future.
         </p>
 
         {/* Buttons */}
@@ -35,12 +38,36 @@ const Hero = () => {
         </div>
 
         {/* Logo Section */}
-        <div className="flex justify-center items-center gap-12 opacity-60">
-          <div className="text-2xl font-semibold text-gray-400">SRM</div>
-          <div className="text-2xl font-semibold text-gray-400">IITB</div>
-          <div className="text-2xl font-semibold text-gray-400">NITR</div>
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <div className="flex flex-col items-center">
+            <img 
+              src={srmLogo} 
+              alt="SRM Logo" 
+              className="h-12 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <img 
+              src={iitbLogo} 
+              alt="IIT Bombay Logo" 
+              className="h-16 md:h-24 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <img 
+              src={iitpkdLogo} 
+              alt="IIT Palakkad Logo" 
+              className="h-12 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
+            />
+          </div>
+          <div className="flex flex-col items-center">
+            <img 
+              src={nitrLogo} 
+              alt="NIT Rourkela Logo" 
+              className="h-12 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
+            />
+          </div>
         </div>
-      
       </div>
     </div>
   );
