@@ -1,8 +1,6 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import logo from '../assets/logo.png'; // Make sure to place your logo.png in src/assets
+import { Link } from "react-router-dom"; // Add this import
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,24 +38,25 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center" onClick={scrollToTop}>
-                <img
-                    src={logo}
-                    alt="CMAC Logo"
-                    className="h-8 md:h-10 w-auto"
-                />
-              </Link>
+              <h1 className="text-xl font-semibold">
+                <button
+                    onClick={scrollToTop}
+                    className="text-black hover:text-gray-700 focus:outline-none transition-colors duration-200"
+                >
+                  CMAC
+                </button>
+              </h1>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex justify-center space-x-8">
-              <Link to="/#demo" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/demo" className="text-black hover:text-gray-600 transition-colors duration-200">
                 Demo
               </Link>
-              <Link to="/#features" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/features" className="text-black hover:text-gray-600 transition-colors duration-200">
                 Features
               </Link>
-              <Link to="/#product" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/product" className="text-black hover:text-gray-600 transition-colors duration-200">
                 Product
               </Link>
               <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
@@ -85,16 +84,16 @@ const Header = () => {
           {isMenuOpen && (
               <div className="md:hidden mt-4">
                 <nav className="flex flex-col space-y-4">
-                  <Link to="/#demo" className="text-black hover:text-gray-600 transition-colors duration-200" onClick={toggleMenu}>
+                  <Link to="/demo" className="text-black hover:text-gray-600 transition-colors duration-200">
                     Demo
                   </Link>
-                  <Link to="/#features" className="text-black hover:text-gray-600 transition-colors duration-200" onClick={toggleMenu}>
+                  <Link to="/features" className="text-black hover:text-gray-600 transition-colors duration-200">
                     Features
                   </Link>
-                  <Link to="/#product" className="text-black hover:text-gray-600 transition-colors duration-200" onClick={toggleMenu}>
+                  <Link to="/product" className="text-black hover:text-gray-600 transition-colors duration-200">
                     Product
                   </Link>
-                  <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200" onClick={toggleMenu}>
+                  <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
                     About
                   </Link>
                   <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
