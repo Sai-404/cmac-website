@@ -54,24 +54,21 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex justify-center space-x-8">
-            <Link to="/demo" className="text-black hover:text-gray-600 transition-colors duration-200">
-              Demo
-            </Link>
-            <Link to="/features" className="text-black hover:text-gray-600 transition-colors duration-200">
-              Features
-            </Link>
-            <Link to="/product" className="text-black hover:text-gray-600 transition-colors duration-200">
-              Product
-            </Link>
             <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
               About
             </Link>
+            <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200">
+              Contact
+            </Link>
+            <Link to="/our-team" className="text-black hover:text-gray-600 transition-colors duration-200">
+              Our Team
+            </Link>
           </nav>
 
-          {/* Desktop Login Button */}
+          {/* Desktop Apply Now Button */}
           <div className="hidden md:block">
             <button className="px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
-              Log in
+              Apply Now
             </button>
           </div>
 
@@ -88,20 +85,17 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4">
             <nav className="flex flex-col space-y-4">
-              <Link to="/demo" className="text-black hover:text-gray-600 transition-colors duration-200">
-                Demo
-              </Link>
-              <Link to="/features" className="text-black hover:text-gray-600 transition-colors duration-200">
-                Features
-              </Link>
-              <Link to="/product" className="text-black hover:text-gray-600 transition-colors duration-200">
-                Product
-              </Link>
               <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
                 About
               </Link>
+              <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200">
+                Contact
+              </Link>
+              <Link to="/our-team" className="text-black hover:text-gray-600 transition-colors duration-200">
+                Our Team
+              </Link>
               <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
-                Log in
+                Apply Now
               </button>
             </nav>
           </div>
