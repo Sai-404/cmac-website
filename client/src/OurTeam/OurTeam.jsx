@@ -1,5 +1,7 @@
 import React from 'react';
 import { Mail, Linkedin, Twitter } from "lucide-react";
+import Header from "../Home/Components/Header.jsx";
+import Footer from "../Home/Components/Footer.jsx";
 
 const OurTeam = () => {
   const teamMembers = [
@@ -42,7 +44,9 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 py-16 px-4">
+    <div className="min-h-screen bg-slate-50 pt-24 px-4">
+      <Header />
+
       {/* Header Section */}
       <div className="max-w-6xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-bold text-slate-900 mb-4">
@@ -102,6 +106,8 @@ const OurTeam = () => {
           </div>
         ))}
       </div>
+
+      <Footer />
     </div>
   );
 };
