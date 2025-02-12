@@ -8,12 +8,14 @@ const Hero = () => {
         {/* Label */}
         <div className="flex items-center justify-center gap-2 text-emerald-600 mb-4 sm:mb-6">
           <Sparkles size={16} />
-          <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">CMAC – The Future of Mathematical Computing</span>
+          <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
+            CMAC – The Future of Mathematical Computing
+          </span>
         </div>
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
-          Empowering Minds <br className="hidden sm:block" />Powering Innovation
+          Empowering Minds <br className="hidden sm:block" /> Powering Innovation
         </h1>
 
         {/* Subheading */}

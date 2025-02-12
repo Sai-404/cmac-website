@@ -11,13 +11,14 @@ import Testimonials from "./Testimonials.jsx";
 import S1 from "./S1.jsx";
 import S2 from "./S2.jsx";
 import Blogs from "./Blogs.jsx";
-
+import Trusted from "./Trusted.jsx";
 const Home = () => {
   return (
     <div className="relative w-full min-h-screen bg-gray-100 overflow-x-hidden">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <Header/>
         <Hero/>
+        <Trusted/>
         {/* <Numbers/> */}
         <Features/>
         {/* <S1/> */}
