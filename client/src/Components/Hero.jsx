@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
+import '../App.css';
 
 const Hero = () => {
   return (
