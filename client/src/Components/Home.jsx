@@ -18,12 +18,12 @@ const Home = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <Header/>
         <Hero/>
-        <Numbers/>
+        {/* <Numbers/> */}
         <Features/>
-        <S1/>
+        {/* <S1/> */}
         <S2/>
         <Testimonials/>
-        <Blogs/>
+        {/* <Blogs/> */}
         <div className="my-8">
           <WhatsApp/>
         </div>
