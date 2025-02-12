@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Header from "./Header.jsx";
-import Hero from "./Hero.jsx";
+import Header from "./Components/Header.jsx";
+import Hero from "./Components/Hero.jsx";
 import '../index.css';
-import Footer from "./Footer.jsx";
-import WhatsApp from "./WhatsApp.jsx";
-import Numbers from "./Numbers.jsx";
-import Features from "./Features.jsx";
-import Testimonials from "./Testimonials.jsx";
-import S1 from "./S1.jsx";
-import S2 from "./S2.jsx";
-import Blogs from "./Blogs.jsx";
+import Footer from "./Components/Footer.jsx";
+import WhatsApp from "./Components/WhatsApp.jsx";
+import Numbers from "./Components/Numbers.jsx";
+import Features from "./Components/Features.jsx";
+import Testimonials from "./Components/Testimonials.jsx";
+import S1 from "./Components/S1.jsx";
+import S2 from "./Components/S2.jsx";
+import Blogs from "./Components/Blogs.jsx";
 import '../App.css';
 
 const Home = () => {

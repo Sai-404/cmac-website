@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import iitbLogo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -44,8 +44,8 @@ const Header = () => {
               className="flex items-center space-x-3 text-black hover:text-gray-700 focus:outline-none transition-colors duration-200"
             >
               <img 
-                src={iitbLogo} 
-                alt="IITB Logo" 
+                src={logo} 
+                alt="Logo" 
                 className="h-12 w-auto"
               />
               <h1 className="text-xl font-semibold">CMAC</h1>

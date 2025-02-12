@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import Header from "../Home/Components/Header.jsx";
+import Footer from "../Home/Components/Footer.jsx";
 
 const About = () => {
     return (
