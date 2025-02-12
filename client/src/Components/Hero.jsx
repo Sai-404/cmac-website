@@ -30,38 +30,6 @@ const Hero = () => {
             View Demo
           </button>
         </div>
-
-        {/* Logo Section */}
-        <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12">
-          <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/api/placeholder/200/100"
-              alt="SRM Logo" 
-              className="h-12 sm:h-14 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/api/placeholder/200/100"
-              alt="IIT Bombay Logo" 
-              className="h-16 sm:h-20 md:h-24 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/api/placeholder/200/100"
-              alt="IIT Palakkad Logo" 
-              className="h-12 sm:h-14 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/api/placeholder/200/100"
-              alt="NIT Rourkela Logo" 
-              className="h-12 sm:h-14 md:h-16 object-contain filter grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all"
-            />
-          </div>
-        </div>
       </div>
     </div>
   );
