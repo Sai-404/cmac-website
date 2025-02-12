@@ -91,7 +91,7 @@ const Header = () => {
               <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200">
                 Contact
               </Link>
-              <Link to="/our-team" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200">
                 Our Team
               </Link>
               <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
