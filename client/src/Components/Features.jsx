@@ -46,7 +46,7 @@ const Features = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <div className="flex items-center justify-center gap-2 text-emerald-500 mb-4">
+          <div className="flex items-center justify-center gap-2 text-[#CC0000] mb-4">
             <Sparkles size={16} />
             <span className="text-sm font-medium tracking-wider uppercase">SMART + FAST</span>
           </div>
