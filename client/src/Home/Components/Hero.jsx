@@ -1,12 +1,13 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
+import './home.css';
 
 const Hero = () => {
   return (
     <div className="min-h-screen w-full bg-orange-50 relative overflow-hidden">
       <div className="max-w-6xl mx-auto text-center relative z-10 px-4 py-12 sm:py-16 md:py-20">
         {/* Label */}
-        <div className="flex items-center justify-center gap-2 text-emerald-600 mb-4 sm:mb-6">
+        <div className="flex items-center justify-center gap-2 text-[#cc0000]">
           <Sparkles size={16} />
           <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
             CMAC – The Future of Mathematical Computing
