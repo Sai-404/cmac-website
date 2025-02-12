@@ -5,8 +5,8 @@ const WhatsApp = () => {
   return (
     <div className="bg-[#0A1A1F] w-full rounded-3xl p-4 sm:p-8 md:p-16 flex items-center justify-center">
       <div className="max-w-6xl w-full">
-        <div className="flex items-center justify-center gap-2 text-emerald-400 mb-6">
-          <Sparkles size={16} className="text-emerald-400" />
+        <div className="flex items-center justify-center gap-2 text-[#CC0000] mb-6">
+          <Sparkles size={16} className="text-[#CC0000]" />
           <span className="text-sm font-medium tracking-wider uppercase">Join the best</span>
         </div>
         

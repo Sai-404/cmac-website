@@ -55,7 +55,7 @@ const S2 = () => {
 
       <div className="relative w-full max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <p className="text-emerald-500 font-medium mb-4">PLANS AND PRICING</p>
+          <p className="text-[#CC0000] font-medium mb-4">PLANS AND PRICING</p>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Transparent pricing for all</h2>
           <p className="text-slate-600">Every business is unique, find the perfect plan for you.</p>
         </div>
