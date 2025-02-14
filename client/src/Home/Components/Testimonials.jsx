@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -16,33 +15,22 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="w-full py-12 px-4 md:px-6 lg:px-8">
+    <section className="w-full py-20 px-4 md:px-6 lg:px-8 bg-gray-50">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold">Our Testimonials</h2>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          </div>
+        <div className="text-center mb-16">
+          <p className="text-[#CC0000] font-normal text-xl mb-6">Our Testimonials</p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-4"
-            >
-              <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full"
-                />
-                <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                </div>
+            <div key={index} className="bg-white shadow-lg rounded-xl p-8">
+              <div className="flex items-center mb-6">
+                <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-6" />
+                <h3 className="text-2xl font-semibold text-gray-800">{testimonial.name}</h3>
               </div>
-              <p className="text-gray-600">"{testimonial.text}"</p>
+              <p className="text-gray-600 text-lg">{testimonial.text}</p>
             </div>
           ))}
         </div>
