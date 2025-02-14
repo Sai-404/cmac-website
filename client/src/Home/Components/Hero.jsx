@@ -15,9 +15,8 @@ const Hero = () => {
         </div>
 
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Empowering Minds <br className="hidden sm:block" />
-          Powering Innovation
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+          Empowering Minds <br className="hidden sm:block" /> Powering Innovation
         </h1>
 
         {/* Subheading */}
