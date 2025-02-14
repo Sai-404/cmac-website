@@ -37,30 +37,29 @@ const Header = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          {/* Logo and Text */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-3 text-black hover:text-gray-700 focus:outline-none transition-colors duration-200"
+              className="focus:outline-none transition-colors duration-200"
             >
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="h-12 w-auto"
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-16 w-auto" // Increased height from h-12 to h-16
               />
-              <h1 className="text-xl font-semibold">CMAC</h1>
             </button>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex justify-center space-x-8">
-            <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
+            <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
               About
             </Link>
-            <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200">
+            <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
               Contact
             </Link>
-            <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200">
+            <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
               Our Team
             </Link>
           </nav>
@@ -85,13 +84,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4">
             <nav className="flex flex-col space-y-4">
-              <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
                 About
               </Link>
-              <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/contact" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
                 Contact
               </Link>
-              <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200">
+              <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
                 Our Team
               </Link>
               <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
