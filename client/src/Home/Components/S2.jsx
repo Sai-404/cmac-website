@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import './home.css';
 
 const S2 = () => {
   const plans = [
@@ -49,7 +50,7 @@ const S2 = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-50 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-orange-50 overflow-hidden">
       {/* Wall Pattern Background with lighter opacity */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-10" />
 
@@ -84,7 +85,7 @@ const S2 = () => {
                 <button
                   className={`w-full py-3 px-4 rounded-full font-medium transition-colors ${
                     plan.variant === "dark"
-                      ? "bg-[#EBFFDC] text-slate-900 hover:bg-green-100"
+                      ? "bg-[#EBFFDC] text-slate-900 hover:bg-red-100"
                       : "bg-[#0f3730] text-white hover:bg-[#0a2922]"
                   }`}
                 >
