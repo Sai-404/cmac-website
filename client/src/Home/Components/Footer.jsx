@@ -40,7 +40,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="w-full bg-white py-12 border-t border-gray-200">
+    <footer className="w-full bg-orange-50 py-12 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Logo and tagline section */}
