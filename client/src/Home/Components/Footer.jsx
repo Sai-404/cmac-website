@@ -79,14 +79,11 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-600">
-              © 2024 CMAC. All rights reserved.
+              © 2025 CMAC. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <SocialIcon Icon={Twitter} />
               <SocialIcon Icon={Linkedin} />
-              <SocialIcon Icon={Facebook} />
               <SocialIcon Icon={Instagram} />
-              <SocialIcon Icon={Github} />
             </div>
           </div>
         </div>
