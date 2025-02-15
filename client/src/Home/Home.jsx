@@ -12,6 +12,7 @@ import S1 from "./Components/S1.jsx";
 import S2 from "./Components/S2.jsx";
 import Blogs from "./Components/Blogs.jsx";
 import '../App.css';
+import Trusted from "./Components/Trusted.jsx";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <Header/>
         <Hero/>
+        <Trusted/>
         {/* <Numbers/> */}
         <Features/>
         {/* <S1/> */}

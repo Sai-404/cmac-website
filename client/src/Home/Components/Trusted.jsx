@@ -1,8 +1,8 @@
 import React from 'react';
-import iitbLogo from '../assets/IITBOMBAY.png';
-import iitpkdLogo from '../assets/IITPKD.png';
-import nitLogo from '../assets/NIT_Rourkela_Colour_Logo.png';
-import srmLogo from '../assets/srmlogo.png';
+import iitbLogo from '../../assets/IITBOMBAY.png';
+import iitpkdLogo from '../../assets/IITPKD.png';
+import nitLogo from '../../assets/NIT_Rourkela_Colour_Logo.png';
+import srmLogo from '../../assets/srmlogo.png';
 
 const Trusted = () => {
   return (

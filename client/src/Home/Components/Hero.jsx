@@ -4,10 +4,10 @@ import './home.css';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-orange-50 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center relative z-10 px-4 py-12 sm:py-16 md:py-20">
+    <div className="h-screen w-full bg-orange-50 relative overflow-hidden flex items-center justify-center">
+      <div className="max-w-6xl mx-auto text-center relative z-10 px-4">
         {/* Label */}
-        <div className="flex items-center justify-center gap-2 text-[#cc0000]">
+        <div className="flex items-center justify-center gap-2 text-[#cc0000] mb-8">
           <Sparkles size={16} />
           <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
             CMAC – The Future of Mathematical Computing
@@ -20,16 +20,16 @@ const Hero = () => {
         </h1>
 
         {/* Subheading */}
-        <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-8 sm:mb-12">
+        <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10">
           The Council for Mathematics and Advanced Computing (CMAC) is a hub for intellectual growth, research, and technological breakthroughs. Join us in shaping the future.
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16">
-          <button className="px-6 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors text-sm sm:text-base">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <button className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors text-sm sm:text-base">
             Get Started
           </button>
-          <button className="px-6 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base">
+          <button className="w-full sm:w-auto px-8 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base border border-gray-200">
             View Demo
           </button>
         </div>
