@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
-import logo from '../../assets/logo.png';
-
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import logo from "../../assets/logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +19,15 @@ const Header = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      navigate('/');
+    }
   };
 
   const toggleMenu = () => {
@@ -40,13 +45,13 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={scrollToTop}
+              onClick={handleLogoClick}
               className="focus:outline-none transition-colors duration-200"
             >
               <img
                 src={logo}
                 alt="Logo"
-                className="h-16 w-auto" // Increased height from h-12 to h-16
+                className="h-16 w-auto"
               />
             </button>
           </div>
