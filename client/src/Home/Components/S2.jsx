@@ -1,36 +1,30 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import IB from '../../assets/INTEGRALBEE.jpg';
+import NH from '../../assets/NHLOGO.jpg';
 
 const S2 = () => {
   const plans = [
     {
-      name: "Personal",
-      description: "Designed for personal use and freelancers.",
-      price: "64",
+      name: "INTEGRAL BEE",
+      image: IB,
       features: [
-        { name: "Ticketing system", included: true },
-        { name: "Email, chat, voice, and more", included: true },
-        { name: "1,000+ apps & integrations", included: true },
-        { name: "Multiple ticket forms", included: false },
-        { name: "Customer satisfaction (CSAT)", included: false }
+        { name: "The Integral Bee was a mathematics competition conducted by CMAC on the 23rd of December, where participants demonstrated their skills in solving integrals, ranging from basic concepts to advanced techniques. This event was designed to challenge students' calculus knowledge, encourage quick thinking, and celebrate mathematical problem-solving in honor of Srinivasa Ramanujan, whose work greatly influenced the field.", included: true },
       ],
       variant: "light",
-      bgColor: "bg-[#EBFFDC]", // Updated color
+      bgColor: "bg-[#FFDE59]",
+      hideRegister: true,
     },
     {
-      name: "Growth",
-      description: "Best for small to medium-sized businesses.",
-      price: "115",
+      name: "NUMEROHACK",
+      image: NH,
       features: [
-        { name: "Ticketing system", included: true },
-        { name: "Email, chat, voice, and more", included: true },
-        { name: "5,000+ apps & integrations", included: true },
-        { name: "Multiple ticket forms", included: true },
-        { name: "Customer satisfaction (CSAT)", included: true }
+        { name: "NumeroHack will be an innovative, 5-hour, offline hackathon conducted by the Council for Mathematics and Advanced Computing as a part of Texus'25. It will challenge students to collaborate in pairs and use their mathematical and technical skills to develop creative solutions. This event will encourage teamwork, innovation, and the application of mathematical principles in a real-world, technical context. Participants will work on math-based projects, app development, or problem-solving tasks that require the application of algorithms, data analysis, and other mathematical concepts.", included: true },
       ],
       variant: "dark",
-      bgColor: "bg-[#0f3730]",
-      popular: true,
+      bgColor: "bg-[#000000]",
+      upcoming: true,
+      hideRegister: true,
     },
     {
       name: "Professional",
@@ -44,20 +38,23 @@ const S2 = () => {
         { name: "Customer satisfaction (CSAT)", included: true }
       ],
       variant: "light",
-      bgColor: "bg-[#EBFFDC]", // Updated color
+      bgColor: "bg-[#EBFFDC]",
     },
   ];
 
   return (
     <div className="relative w-full min-h-screen bg-slate-50 overflow-hidden">
-      {/* Wall Pattern Background with lighter opacity */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-10" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <p className="text-[#CC0000] font-medium mb-4">PLANS AND PRICING</p>
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Transparent pricing for all</h2>
-          <p className="text-slate-600">Every business is unique, find the perfect plan for you.</p>
+          <p className="text-[#CC0000] font-medium mb-4">EVENTS</p>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">The CMAC Club Events</h2>
+          <p className="text-slate-600">
+            The CMAC Club organizes events that seamlessly integrate the fields of mathematics and computer science. 
+            These events foster innovation, encouraging participants to explore the intersection of these two dynamic 
+            disciplines through various challenges and activities.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-4">
@@ -70,30 +67,40 @@ const S2 = () => {
               >
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="text-xl font-semibold">{plan.name}</h3>
-                  {plan.popular && (
-                    <span className="px-3 py-1 text-xs bg-[#EBFFDC] text-slate-900 rounded-full">
-                      MOST POPULAR
+                  {plan.upcoming && (
+                    <span className="px-3 py-1 text-xs bg-[#CC0000] text-[#FFF7ED] rounded-full">
+                      UPCOMING
                     </span>
                   )}
                 </div>
-                <p className="text-sm opacity-80 mb-4">{plan.description}</p>
-                <div className="flex items-baseline mb-8">
-                  <span className="text-4xl font-bold">${plan.price}</span>
-                  <span className="ml-2 opacity-80">/month</span>
-                </div>
-                <button
-                  className={`w-full py-3 px-4 rounded-full font-medium transition-colors ${
-                    plan.variant === "dark"
-                      ? "bg-[#EBFFDC] text-slate-900 hover:bg-green-100"
-                      : "bg-[#0f3730] text-white hover:bg-[#0a2922]"
-                  }`}
-                >
-                  Get Started
-                </button>
+                {plan.image ? (
+                  <div className="mb-4">
+                    <img src={plan.image} alt={plan.name} className="w-full h-48 object-contain rounded-lg" />
+                  </div>
+                ) : (
+                  <>
+                    <p className="text-sm opacity-80 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline mb-8">
+                      <span className="text-4xl font-bold">${plan.price}</span>
+                      <span className="ml-2 opacity-80">/month</span>
+                    </div>
+                  </>
+                )}
+                {!plan.hideRegister && (
+                  <button
+                    className={`w-full py-3 px-4 rounded-full font-medium transition-colors ${
+                      plan.variant === "dark"
+                        ? "bg-[#EBFFDC] text-slate-900 hover:bg-green-100"
+                        : "bg-[#0f3730] text-white hover:bg-[#0a2922]"
+                    }`}
+                  >
+                    Register Now
+                  </button>
+                )}
               </div>
 
               <div className="bg-white rounded-3xl p-8 shadow-sm flex-grow -mt-4">
-                <p className="font-medium mb-6">Features</p>
+                <p className="font-medium mb-6">Event Details</p>
                 <ul className="space-y-4">
                   {plan.features.map((feature) => (
                     <li key={feature.name} className="flex items-center">
