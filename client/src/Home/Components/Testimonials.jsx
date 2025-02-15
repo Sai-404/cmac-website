@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-6 lg:px-8 bg-gray-50">
+    <section className="w-full py-20 px-4 md:px-6 lg:px-8 bg-orange-50">
       {/* Header Section */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

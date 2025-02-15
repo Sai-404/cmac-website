@@ -43,7 +43,7 @@ const S2 = () => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-slate-50 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-orange-50 overflow-hidden">
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-10" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 py-16">
