@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
+import './Header.css'; // Import the CSS file
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,15 +19,11 @@ const Header = () => {
     };
   }, []);
 
-  const handleLogoClick = () => {
-    if (location.pathname === '/') {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    } else {
-      navigate('/');
-    }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const toggleMenu = () => {
@@ -45,13 +41,13 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
-              onClick={handleLogoClick}
+              onClick={scrollToTop}
               className="focus:outline-none transition-colors duration-200"
             >
               <img
                 src={logo}
                 alt="Logo"
-                className="h-16 w-auto"
+                className="h-16 w-auto" // Increased height from h-12 to h-16
               />
             </button>
           </div>
@@ -71,8 +67,10 @@ const Header = () => {
 
           {/* Desktop Apply Now Button */}
           <div className="hidden md:block">
-            <button className="px-4 py-1 rounded-full text-white border-black hover:bg-gray-100 transition-colors duration-200 bg-[#0A1A1F]">
-              Apply Now
+            <button className="px-4 py-1 rounded-full text-white font-bold relative overflow-hidden bg-[#0A1A1F] hover:bg-[#0A1A1F] transition-all duration-300">
+              <span className="relative z-10">Apply Now</span>
+              {/* Shimmer Effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-shimmer"></span>
             </button>
           </div>
 
