@@ -1,12 +1,13 @@
-import React from 'react';
-import { Twitter, Linkedin, Facebook, Instagram, Github } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const footerSections = {
     'Quick Links': [
-      { name: 'Terms and Conditions', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Cookies', href: '#' }
+      { name: 'About', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Our Team', href: '/ourTeam' }
     ],
   };
 
@@ -19,21 +20,29 @@ const Footer = () => {
     </a>
   );
 
+  // Use useLocation to get the current route
+  const location = useLocation();
+
+  // Scroll to the top whenever the route changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
   return (
     <footer className="w-full bg-orange-50 py-12 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between">
           {/* Logo and tagline section */}
           <div className="max-w-md text-center md:text-left">
-            <a href="/" className="text-2xl font-bold text-gray-900">
+            <Link to="/" className="text-2xl font-bold text-gray-900">
               CMAC
-            </a>
+            </Link>
             <p className="mt-4 text-sm text-gray-600">
               Empowering your financial future with innovative solutions.
             </p>
           </div>
 
-          {/* Quick Links section - now with original text alignment */}
+          {/* Quick Links section */}
           <div className="mt-8 md:mt-0 text-center md:text-left">
             <h3 className="text-sm font-medium text-gray-900 mb-4">
               Quick Links
@@ -41,12 +50,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerSections['Quick Links'].map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
