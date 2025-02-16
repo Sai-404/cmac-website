@@ -3,13 +3,13 @@ import React from 'react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Michelle Rivera",
-      image: "/api/placeholder/48/48",
+      name: "DR. SHAKEELA SATHISH",
+      profession: "HOD OF MATHEMATICS DEPARTMENT SRMIST",
       text: "We love Growio because their API allows us to explore ways to get customer data in front of agents in ways that create a smoother, more personalized experience."
     },
     {
-      name: "Ronald Richards",
-      image: "/api/placeholder/48/48",
+      name: "DR. GURUSWAMY ARUMUGAM",
+      profession: "ASSISTANT PROFESSOR OF MATHEMATICS DEPARTMENT SRMIST",
       text: "Growio's integration capabilities, flexibility, and feature depth allow me to be creative with how we're using it. And they let us scale in really interesting and powerful ways."
     }
   ];
@@ -26,9 +26,9 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white shadow-lg rounded-xl p-8">
-              <div className="flex items-center mb-6">
-                <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-6" />
+              <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-gray-800">{testimonial.name}</h3>
+                <p className="text-gray-500 text-lg mt-2">{testimonial.profession}</p>
               </div>
               <p className="text-gray-600 text-lg">{testimonial.text}</p>
             </div>
