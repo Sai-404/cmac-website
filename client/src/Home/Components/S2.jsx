@@ -25,21 +25,7 @@ const S2 = () => {
       bgColor: "bg-[#000000]",
       upcoming: true,
       hideRegister: true,
-    },
-    {
-      name: "Professional",
-      description: "Perfect for large corporations and scaling startups.",
-      price: "149",
-      features: [
-        { name: "Ticketing system", included: true },
-        { name: "Email, chat, voice, and more", included: true },
-        { name: "10,000+ apps & integrations", included: true },
-        { name: "Multiple ticket forms", included: true },
-        { name: "Customer satisfaction (CSAT)", included: true }
-      ],
-      variant: "light",
-      bgColor: "bg-[#EBFFDC]",
-    },
+    }
   ];
 
   return (
