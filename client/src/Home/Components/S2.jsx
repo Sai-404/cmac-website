@@ -36,72 +36,56 @@ const S2 = () => {
         <div className="text-center mb-16">
           <p className="text-[#CC0000] font-medium mb-4">EVENTS</p>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">The CMAC Club Events</h2>
-          <p className="text-slate-600">
+          <p className="text-slate-600 max-w-2xl mx-auto">
             The CMAC Club organizes events that seamlessly integrate the fields of mathematics and computer science. 
             These events foster innovation, encouraging participants to explore the intersection of these two dynamic 
             disciplines through various challenges and activities.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4">
-          {plans.map((plan) => (
-            <div key={plan.name} className="flex flex-col">
-              <div
-                className={`rounded-3xl p-8 ${plan.bgColor} ${
-                  plan.variant === "dark" ? "text-white" : "text-slate-900"
-                }`}
-              >
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-xl font-semibold">{plan.name}</h3>
-                  {plan.upcoming && (
-                    <span className="px-3 py-1 text-xs bg-[#CC0000] text-[#FFF7ED] rounded-full">
-                      UPCOMING
-                    </span>
+        {/* Centered Grid */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+            {plans.map((plan) => (
+              <div key={plan.name} className="flex flex-col">
+                <div
+                  className={`rounded-3xl p-8 ${plan.bgColor} ${
+                    plan.variant === "dark" ? "text-white" : "text-slate-900"
+                  }`}
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-semibold">{plan.name}</h3>
+                    {plan.upcoming && (
+                      <span className="px-3 py-1 text-xs bg-[#CC0000] text-[#FFF7ED] rounded-full">
+                        UPCOMING
+                      </span>
+                    )}
+                  </div>
+                  {plan.image && (
+                    <div className="mb-4">
+                      <img src={plan.image} alt={plan.name} className="w-full h-48 object-contain rounded-lg" />
+                    </div>
                   )}
                 </div>
-                {plan.image ? (
-                  <div className="mb-4">
-                    <img src={plan.image} alt={plan.name} className="w-full h-48 object-contain rounded-lg" />
-                  </div>
-                ) : (
-                  <>
-                    <p className="text-sm opacity-80 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline mb-8">
-                      <span className="text-4xl font-bold">${plan.price}</span>
-                      <span className="ml-2 opacity-80">/month</span>
-                    </div>
-                  </>
-                )}
-                {!plan.hideRegister && (
-                  <button
-                    className={`w-full py-3 px-4 rounded-full font-medium transition-colors ${
-                      plan.variant === "dark"
-                        ? "bg-[#EBFFDC] text-slate-900 hover:bg-green-100"
-                        : "bg-[#0f3730] text-white hover:bg-[#0a2922]"
-                    }`}
-                  >
-                    Register Now
-                  </button>
-                )}
-              </div>
 
-              <div className="bg-white rounded-3xl p-8 shadow-sm flex-grow -mt-4">
-                <p className="font-medium mb-6">Event Details</p>
-                <ul className="space-y-4">
-                  {plan.features.map((feature) => (
-                    <li key={feature.name} className="flex items-center">
-                      <CheckCircle2
-                        className={`w-5 h-5 mr-3 ${feature.included ? "text-[#0f3730]" : "text-slate-200"}`}
-                      />
-                      <span className={feature.included ? "text-slate-900" : "text-slate-400"}>
-                        {feature.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="bg-white rounded-3xl p-8 shadow-sm flex-grow -mt-4">
+                  <p className="font-medium mb-6">Event Details</p>
+                  <ul className="space-y-4">
+                    {plan.features.map((feature) => (
+                      <li key={feature.name} className="flex items-center">
+                        <CheckCircle2
+                          className={`w-5 h-5 mr-3 ${feature.included ? "text-[#0f3730]" : "text-slate-200"}`}
+                        />
+                        <span className={feature.included ? "text-slate-900" : "text-slate-400"}>
+                          {feature.name}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
