@@ -4,7 +4,7 @@ import Footer from "../Home/Components/Footer.jsx";
 
 const About = () => {
     return (
-        <div className="relative w-full min-h-screen bg-gray-100 overflow-x-hidden">
+        <div className="relative w-full min-h-screen bg-[#FFF7ED] overflow-x-hidden">
             <Header />
             <motion.div
                 className="container mx-auto px-4 sm:px-6 lg:px-8 py-24"
