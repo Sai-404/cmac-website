@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import logo from '../../assets/logo.png';
 import './Header.css'; // Import the CSS file
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +21,10 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => {
+    navigate("/"); // Redirect to the home page
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth", // Smooth scroll to the top
     });
   };
 
@@ -99,7 +101,7 @@ const Header = () => {
               <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
                 Apply Now
               </button>
-            </nav>
+ </nav>
           </div>
         )}
       </div>
