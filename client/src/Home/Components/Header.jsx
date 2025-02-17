@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import './Header.css'; // Import the CSS file
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,15 +20,18 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => {
-    navigate("/"); // Redirect to the home page
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scroll to the top
+      behavior: "smooth",
     });
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleApplyNow = () => {
+    window.location.href = "https://forms.gle/akY5vjaX22wynKaV9"; // Redirect to the Google Forms link
   };
 
   return (
@@ -69,7 +71,10 @@ const Header = () => {
 
           {/* Desktop Apply Now Button */}
           <div className="hidden md:block">
-            <button className="px-4 py-1 rounded-full text-white font-bold relative overflow-hidden bg-[#0A1A1F] hover:bg-[#0A1A1F] transition-all duration-300">
+            <button
+              onClick={handleApplyNow} // Add onClick handler
+              className="px-4 py-1 rounded-full text-white font-bold relative overflow-hidden bg-[#0A1A1F] hover:bg-[#0A1A1F] transition-all duration-300"
+            >
               <span className="relative z-10">Apply Now</span>
               {/* Shimmer Effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-shimmer"></span>
@@ -98,10 +103,13 @@ const Header = () => {
               <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
                 Our Team
               </Link>
-              <button className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white">
+              <button
+                onClick={handleApplyNow} // Add onClick handler
+                className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white"
+              >
                 Apply Now
               </button>
- </nav>
+            </nav>
           </div>
         )}
       </div>
