@@ -11,9 +11,12 @@ const Footer = () => {
     ],
   };
 
-  const SocialIcon = ({ Icon }) => (
+  // Updated SocialIcon component to accept a URL prop
+  const SocialIcon = ({ Icon, url }) => (
     <a
-      href="#"
+      href={url} // Use the URL passed as a prop
+      target="_blank" // Open the link in a new tab
+      rel="noopener noreferrer" // Recommended for security when using target="_blank"
       className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
     >
       <Icon size={20} strokeWidth={1.5} />
@@ -69,8 +72,16 @@ const Footer = () => {
               © 2025 CMAC. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <SocialIcon Icon={Linkedin} />
-              <SocialIcon Icon={Instagram} />
+              {/* LinkedIn Icon with URL */}
+              <SocialIcon
+                Icon={Linkedin}
+                url="https://www.linkedin.com/company/cmacsrm/"
+              />
+              {/* Instagram Icon with URL */}
+              <SocialIcon
+                Icon={Instagram}
+                url="https://www.instagram.com/cmacsrm/"
+              />
             </div>
           </div>
         </div>
