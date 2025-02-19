@@ -21,27 +21,27 @@ const ContactPage = () => {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact us for:</h2>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+                <span className="w-2 h-2 bg-[#AD0000] rounded-full mt-2"></span>
                 <p className="text-gray-700">Queries about upcoming events, collaborations, or recruitment</p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+                <span className="w-2 h-2 bg-[#AD0000] rounded-full mt-2"></span>
                 <p className="text-gray-700">Suggestions for events you'd like us to organize</p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+                <span className="w-2 h-2 bg-[#AD0000] rounded-full mt-2"></span>
                 <p className="text-gray-700">Testimonials about our club and past events</p>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+                <span className="w-2 h-2 bg-[#AD0000] rounded-full mt-2"></span>
                 <p className="text-gray-700">Ideas to improve our website</p>
               </li>
             </ul>
           </div>
 
           <div className="bg-white rounded-lg shadow-sm p-8 flex flex-col items-center justify-center">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Mail className="w-8 h-8 text-blue-600" />
+            <div className="bg-[#FEF1F2] w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <Mail className="w-8 h-8 text-[#AD0000]" />
             </div>
             
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Email Us</h2>
@@ -51,7 +51,7 @@ const ContactPage = () => {
 
             <a
               href="mailto:cmacsrm@gmail.com"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-[#AD0000] text-white px-8 py-4 rounded-lg hover:bg-[#AD0000] transition-colors duration-200"
             >
               <Mail className="w-5 h-5" />
               cmacsrm@gmail.com

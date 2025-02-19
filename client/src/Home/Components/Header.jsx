@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
 import logo from '../../assets/logo.png';
-import './Header.css'; // Import the CSS file
+import './Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,7 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => {
+    navigate('/'); // Navigate to homepage
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -31,7 +33,7 @@ const Header = () => {
   };
 
   const handleApplyNow = () => {
-    window.location.href = "https://forms.gle/akY5vjaX22wynKaV9"; // Redirect to the Google Forms link
+    window.location.href = "https://forms.gle/akY5vjaX22wynKaV9";
   };
 
   return (
@@ -51,11 +53,12 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-16 w-auto" // Increased height from h-12 to h-16
+                className="h-16 w-auto"
               />
             </button>
           </div>
 
+          {/* Rest of the component remains unchanged */}
           {/* Desktop Navigation */}
           <nav className="hidden md:flex justify-center space-x-8">
             <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
@@ -72,7 +75,7 @@ const Header = () => {
           {/* Desktop Apply Now Button */}
           <div className="hidden md:block">
             <button
-              onClick={handleApplyNow} // Add onClick handler
+              onClick={handleApplyNow}
               className="px-4 py-1 rounded-full text-white font-bold relative overflow-hidden bg-[#0A1A1F] hover:bg-[#0A1A1F] transition-all duration-300"
             >
               <span className="relative z-10">Apply Now</span>
@@ -104,7 +107,7 @@ const Header = () => {
                 Our Team
               </Link>
               <button
-                onClick={handleApplyNow} // Add onClick handler
+                onClick={handleApplyNow}
                 className="w-full px-4 py-1 rounded-full text-black border border-black hover:bg-gray-100 transition-colors duration-200 bg-white"
               >
                 Apply Now
