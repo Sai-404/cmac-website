@@ -27,10 +27,10 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
           <button className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors text-sm sm:text-base">
-            Get Started
+            Join Council
           </button>
           <button className="w-full sm:w-auto px-8 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base border border-gray-200">
-            View Demo
+            Learn More
           </button>
         </div>
       </div>

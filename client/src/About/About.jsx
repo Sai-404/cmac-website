@@ -18,11 +18,7 @@ const About = () => {
                     </h1>
                     <div className="space-y-6 text-gray-600">
                         <p>
-                            The Council for Mathematics and Advanced Computing (CMAC) is a premier
-                            student organization dedicated to fostering innovation and research in
-                            mathematical sciences and computational technologies. Founded in 2024,
-                            we aim to bridge the gap between theoretical mathematics and practical
-                            applications in modern computing.
+                        The Council for Mathematics and Advanced Computing (CMAC) is a dynamic and inclusive community that brings together bright minds passionate about exploring the frontiers of mathematics and computing. Our mission is to create a collaborative environment where innovation thrives, ideas flourish, and academic excellence is celebrated.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-8">
