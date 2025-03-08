@@ -23,6 +23,7 @@ const FeatureCard = ({ icon: Icon, title, description, isClicked, onClick }) => 
       <p className="text-gray-400 leading-relaxed">{description}</p>
     </div>
   </motion.div>
+  </div>
 );
 
 const Features = () => {
@@ -65,6 +66,7 @@ const Features = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
+    <div id="features-section" className="w-full py-16 px-4"> {/* Add id here */}
       <div className="max-w-6xl mx-auto">
         {/* Header Animation */}
         <motion.div 
@@ -114,6 +116,13 @@ const Features = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-50px 0px" }}
         >
+          <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+            Empowering minds, fostering research, and shaping the future with mathematics and advanced computing.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
