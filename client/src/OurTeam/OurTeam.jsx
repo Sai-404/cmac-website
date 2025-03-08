@@ -8,36 +8,28 @@ const OurTeam = () => {
   const teamMembers = [
     {
       name: "Sai Prashanth",
-      role: "CEO & Founder",
+      role: "Founding President",
       image: "/src/assets/sai.jpg", // Top grid image - sai.jpg
-      bio: "10+ years of experience in building and scaling startups. Previously led product at major tech companies.",
+      bio: "The Wonder Boy, Coding Maven and Genius Mathematician.",
       instagram: "https://www.instagram.com/thesaiprashanth/",
       linkedin: "https://www.linkedin.com/in/thesaiprashanth/"
     },
     {
       name: "Sree Anirudh",
-      role: "Chief Technology Officer",
+      role: "Head of Operations, Resources & Logistics",
       image: "/src/assets/anirudh.jpg", // Left bottom - anirudh.jpg
-      bio: "Full-stack developer with expertise in AI and machine learning. Led engineering teams at Fortune 500 companies.",
+      bio: "The Strategic Thinker, Effiency Expert and Logistics Guru.",
       instagram: "https://www.instagram.com/a.sree_anirudhan/",
       linkedin: "https://www.linkedin.com/in/sree-anirudh-alwar-0b6ba5334/"
     },
     {
       name: "Suriya",
-      role: "Head of Design",
+      role: "Head of Management",
       image: "/src/assets/suriya.jpg", // Right bottom - suriya.jpg
-      bio: "Award-winning designer specializing in user experience and brand identity. Previously designed for top tech brands.",
+      bio: "The Meticulous Planner, Marketing Maestro and Management Maverick.",
       instagram: "https://www.instagram.com/ad__suriya/",
       linkedin: "https://www.linkedin.com/in/ad-suriya-5465b0298/?originalSubdomain=in"
     },
-    {
-      name: "James Wilson",
-      role: "Product Manager",
-      image: "/api/placeholder/400/400",
-      bio: "Strategic product leader with a track record of launching successful products. Expert in agile methodologies.",
-      instagram: "#",
-      linkedin: "#"
-    }
   ];
 
   // Animation variants
@@ -91,7 +83,7 @@ const OurTeam = () => {
           Meet Our Team
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          We're a diverse group of passionate individuals working together to create amazing experiences for our customers.
+        At the Council for Mathematics and Advanced Computing (CMAC), we are a team of dedicated individuals passionate about mathematics, computing, and innovation. Our goal is to foster a community where problem-solving, research, and technical excellence thrive.
         </p>
       </motion.div>
 
