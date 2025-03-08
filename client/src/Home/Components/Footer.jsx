@@ -41,7 +41,7 @@ const Footer = () => {
               CMAC
             </Link>
             <p className="mt-4 text-sm text-gray-600">
-              Empowering your financial future with innovative solutions.
+            Where Mathematics Meets Innovation.
             </p>
           </div>
 
