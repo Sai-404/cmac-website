@@ -5,12 +5,12 @@ const TestimonialsSection = () => {
     {
       name: "DR. SHAKEELA SATHISH",
       profession: "HOD OF MATHEMATICS DEPARTMENT SRMIST",
-      text: "We love Growio because their API allows us to explore ways to get customer data in front of agents in ways that create a smoother, more personalized experience."
+      text: "I am delighted to commend the Council for Mathematics and Advanced Computing (CMAC) for its exceptional efforts in promoting mathematical excellence and computational innovation at SRMIST. Through workshops, hackathons, and research-driven projects, CMAC provides students with invaluable opportunities to bridge theory with real-world applications. Its commitment to fostering problem-solving skills and interdisciplinary learning is truly commendable."
     },
     {
       name: "DR. GURUSWAMY ARUMUGAM",
-      profession: "ASSISTANT PROFESSOR OF MATHEMATICS DEPARTMENT SRMIST",
-      text: "Growio's integration capabilities, flexibility, and feature depth allow me to be creative with how we're using it. And they let us scale in really interesting and powerful ways."
+      profession: "ASSISTANT PROFESSOR OF MATHEMATICS DEPARTMENT SRMIST, Coordinating Faculty of CMAC",
+      text: "CMAC has been instrumental in nurturing analytical thinking and computational skills among students at SRMIST. Its initiatives create a dynamic learning environment that bridges mathematics with real-world applications."
     }
   ];
 
