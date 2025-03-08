@@ -7,28 +7,28 @@ import Footer from "../Home/Components/Footer.jsx";
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Sai Prashanth",
       role: "CEO & Founder",
-      image: "/api/placeholder/400/400",
+      image: "/src/assets/sai.jpg", // Top grid image - sai.jpg
       bio: "10+ years of experience in building and scaling startups. Previously led product at major tech companies.",
-      instagram: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/thesaiprashanth/",
+      linkedin: "https://www.linkedin.com/in/thesaiprashanth/"
     },
     {
-      name: "Michael Chen",
+      name: "Sree Anirudh",
       role: "Chief Technology Officer",
-      image: "/api/placeholder/400/400",
+      image: "/src/assets/anirudh.jpg", // Left bottom - anirudh.jpg
       bio: "Full-stack developer with expertise in AI and machine learning. Led engineering teams at Fortune 500 companies.",
-      instagram: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/a.sree_anirudhan/",
+      linkedin: "https://www.linkedin.com/in/sree-anirudh-alwar-0b6ba5334/"
     },
     {
-      name: "Emma Davis",
+      name: "Suriya",
       role: "Head of Design",
-      image: "/api/placeholder/400/400",
+      image: "/src/assets/suriya.jpg", // Right bottom - suriya.jpg
       bio: "Award-winning designer specializing in user experience and brand identity. Previously designed for top tech brands.",
-      instagram: "#",
-      linkedin: "#"
+      instagram: "https://www.instagram.com/ad__suriya/",
+      linkedin: "https://www.linkedin.com/in/ad-suriya-5465b0298/?originalSubdomain=in"
     },
     {
       name: "James Wilson",
@@ -110,11 +110,13 @@ const OurTeam = () => {
             variants={itemVariants}
           >
             <div className="flex flex-col md:flex-row gap-12 items-center">
-              <img
-                src={teamMembers[0].image}
-                alt={teamMembers[0].name}
-                className="w-64 h-64 rounded-lg object-cover shadow-lg"
-              />
+              <div className="w-64 h-auto">
+                <img
+                  src={teamMembers[0].image}
+                  alt={teamMembers[0].name}
+                  className="w-full rounded-lg shadow-lg object-contain"
+                />
+              </div>
               <div className="flex-1">
                 <h3 className="text-4xl font-semibold mb-4">
                   {teamMembers[0].name}
@@ -130,6 +132,8 @@ const OurTeam = () => {
                     href={teamMembers[0].instagram}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[0].name}'s Instagram`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Instagram className="w-8 h-8" />
                   </a>
@@ -137,6 +141,8 @@ const OurTeam = () => {
                     href={teamMembers[0].linkedin}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[0].name}'s LinkedIn`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="w-8 h-8" />
                   </a>
@@ -160,11 +166,13 @@ const OurTeam = () => {
               variants={itemVariants}
             >
               <div className="flex flex-col items-center text-center">
-                <img
-                  src={teamMembers[1].image}
-                  alt={teamMembers[1].name}
-                  className="w-36 h-36 rounded-lg object-cover mb-4"
-                />
+                <div className="w-36 h-auto mb-4">
+                  <img
+                    src={teamMembers[1].image}
+                    alt={teamMembers[1].name}
+                    className="w-full rounded-lg object-contain"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">
                   {teamMembers[1].name}
                 </h3>
@@ -179,6 +187,8 @@ const OurTeam = () => {
                     href={teamMembers[1].instagram}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[1].name}'s Instagram`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Instagram className="w-5 h-5" />
                   </a>
@@ -186,6 +196,8 @@ const OurTeam = () => {
                     href={teamMembers[1].linkedin}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[1].name}'s LinkedIn`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
@@ -206,11 +218,13 @@ const OurTeam = () => {
               variants={itemVariants}
             >
               <div className="flex flex-col items-center text-center">
-                <img
-                  src={teamMembers[2].image}
-                  alt={teamMembers[2].name}
-                  className="w-36 h-36 rounded-lg object-cover mb-4"
-                />
+                <div className="w-36 h-auto mb-4">
+                  <img
+                    src={teamMembers[2].image}
+                    alt={teamMembers[2].name}
+                    className="w-full rounded-lg object-contain"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">
                   {teamMembers[2].name}
                 </h3>
@@ -225,6 +239,8 @@ const OurTeam = () => {
                     href={teamMembers[2].instagram}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[2].name}'s Instagram`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Instagram className="w-5 h-5" />
                   </a>
@@ -232,6 +248,8 @@ const OurTeam = () => {
                     href={teamMembers[2].linkedin}
                     className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
                     aria-label={`${teamMembers[2].name}'s LinkedIn`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
