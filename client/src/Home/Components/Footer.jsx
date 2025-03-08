@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Logo and tagline section */}
           <div className="max-w-md text-center md:text-left">
             <Link to="/" className="text-2xl font-bold text-gray-900">
-              CMAC
+              CMAC - Council for Mathematics and Advanced Computing
             </Link>
             <p className="mt-4 text-sm text-gray-600">
             Where Mathematics Meets Innovation.
@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-600">
-              © 2025 CMAC. All rights reserved.
+              © 2025 CMAC SRM RMP IST. All rights reserved.
             </div>
             <div className="flex space-x-6">
               {/* LinkedIn Icon with URL */}

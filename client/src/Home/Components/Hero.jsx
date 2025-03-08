@@ -36,7 +36,7 @@ const Hero = () => {
         >
           <Sparkles size={16} />
           <span className="text-xs sm:text-sm font-medium tracking-wider uppercase">
-            CMAC – The Future of Mathematical Computing
+            CMAC – Where Innovation Begins
           </span>
         </motion.div>
 
