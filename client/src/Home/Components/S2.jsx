@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 import IB from '../../assets/INTEGRALBEE.jpg';
 import NH from '../../assets/NHLOGO.jpg';
 
@@ -28,26 +29,108 @@ const S2 = () => {
     }
   ];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3 // Delay between each card animation
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, x: 100 }, // Start from right side
+    visible: { 
+      opacity: 1, 
+      x: 0,      // Animate to original position
+      transition: { 
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const headerVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        duration: 0.7,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="relative w-full min-h-screen bg-orange-50 overflow-hidden">
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 opacity-10" />
 
       <div className="relative w-full max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <p className="text-[#CC0000] font-medium mb-4">EVENTS</p>
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">The CMAC Club Events</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+        <motion.div 
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ 
+            once: true,
+            amount: 0.3 // Trigger when 30% of the element is visible
+          }}
+          variants={headerVariants}
+        >
+          <motion.p 
+            className="text-[#CC0000] font-medium mb-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            EVENTS
+          </motion.p>
+          <motion.h2 
+            className="text-4xl font-bold text-slate-900 mb-4"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            The CMAC Club Events
+          </motion.h2>
+          <motion.p 
+            className="text-slate-600 max-w-2xl mx-auto"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
             The CMAC Club organizes events that seamlessly integrate the fields of mathematics and computer science. 
             These events foster innovation, encouraging participants to explore the intersection of these two dynamic 
             disciplines through various challenges and activities.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        {/* Centered Grid */}
+        {/* Centered Grid with Animation */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
-            {plans.map((plan) => (
-              <div key={plan.name} className="flex flex-col">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ 
+              once: true, 
+              amount: 0.2, // Trigger when just 20% of the component is visible
+              margin: "0px 0px -100px 0px" // Negative bottom margin to trigger earlier
+            }}
+          >
+            {plans.map((plan, index) => (
+              <motion.div 
+                key={plan.name} 
+                className="flex flex-col"
+                variants={cardVariants}
+                whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                custom={index} // Pass index to enable proper staggering
+              >
                 <div
                   className={`rounded-3xl p-8 ${plan.bgColor} ${
                     plan.variant === "dark" ? "text-white" : "text-slate-900"
@@ -83,9 +166,9 @@ const S2 = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
