@@ -45,7 +45,10 @@ const Hero = () => {
           <button className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors text-sm sm:text-base">
             Join Council
           </button>
-          <button className="w-full sm:w-auto px-8 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base border border-gray-200">
+          <button 
+            className="w-full sm:w-auto px-8 py-3 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base border border-gray-200"
+            onClick={handleLearnMoreClick} // Add this line to hook up the click event
+          >
             Learn More
           </button>
         </div>
