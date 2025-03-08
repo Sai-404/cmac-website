@@ -11,14 +11,6 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
       <h3 className="text-white text-2xl font-semibold">{title}</h3>
       <p className="text-gray-400 leading-relaxed">{description}</p>
     </div>
-    
-    {/* <button className="flex items-center gap-2 text-white border border-gray-700 rounded-full px-6 py-3 w-fit hover:bg-gray-800 transition-colors">
-      Explore
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.33334 8H12.6667" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M8.66667 4L12.6667 8L8.66667 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    </button> */}
   </div>
 );
 
@@ -42,7 +34,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="w-full py-16 px-4">
+    <div id="features-section" className="w-full py-16 px-4"> {/* Add id here */}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
@@ -56,7 +48,7 @@ const Features = () => {
           </h2>
           
           <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-          Empowering minds, fostering research, and shaping the future with mathematics and advanced computing.
+            Empowering minds, fostering research, and shaping the future with mathematics and advanced computing.
           </p>
         </div>
 
