@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [isClicked, setIsClicked] = useState(false);
+
   
   // Add effect to force light mode
   useEffect(() => {
@@ -35,6 +36,10 @@ const Hero = () => {
 
     // Update the state to indicate the button has been clicked
     setIsClicked(true);
+  };
+
+  const handleApplyNow = () => {
+    window.location.href = "https://forms.gle/akY5vjaX22wynKaV9";
   };
 
   return (
@@ -90,6 +95,7 @@ const Hero = () => {
           <button 
             className="w-full sm:w-auto px-8 py-3 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors text-sm sm:text-base focus:outline-none"
             style={{backgroundColor: '#111827', color: '#ffffff'}}
+            onClick={handleApplyNow}
           >
             Join Council
           </button>
