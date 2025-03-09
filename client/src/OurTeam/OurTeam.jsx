@@ -102,7 +102,7 @@ const OurTeam = () => {
             variants={itemVariants}
           >
             <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="w-64 h-auto">
+              <div className="w-48 h-auto">
                 <img
                   src={teamMembers[0].image}
                   alt={teamMembers[0].name}
@@ -113,7 +113,7 @@ const OurTeam = () => {
                 <h3 className="text-4xl font-semibold mb-4">
                   {teamMembers[0].name}
                 </h3>
-                <p className="text-emerald-400 font-medium mb-6 text-2xl">
+                <p className="text-rose-600 font-medium mb-6 text-2xl">
                   {teamMembers[0].role}
                 </p>
                 <p className="text-gray-300 mb-8 text-xl leading-relaxed">
@@ -122,7 +122,7 @@ const OurTeam = () => {
                 <div className="flex items-center gap-8">
                   <a
                     href={teamMembers[0].instagram}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-rose-600 transition-colors duration-300"
                     aria-label={`${teamMembers[0].name}'s Instagram`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -131,7 +131,7 @@ const OurTeam = () => {
                   </a>
                   <a
                     href={teamMembers[0].linkedin}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-rose-600 transition-colors duration-300"
                     aria-label={`${teamMembers[0].name}'s LinkedIn`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -168,7 +168,7 @@ const OurTeam = () => {
                 <h3 className="text-xl font-semibold mb-2">
                   {teamMembers[1].name}
                 </h3>
-                <p className="text-emerald-400 font-medium mb-3">
+                <p className="text-yellow-500 font-medium mb-3">
                   {teamMembers[1].role}
                 </p>
                 <p className="text-gray-300 text-sm mb-4">
@@ -177,7 +177,7 @@ const OurTeam = () => {
                 <div className="flex items-center gap-4">
                   <a
                     href={teamMembers[1].instagram}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-yellow-500 transition-colors duration-300"
                     aria-label={`${teamMembers[1].name}'s Instagram`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -186,7 +186,7 @@ const OurTeam = () => {
                   </a>
                   <a
                     href={teamMembers[1].linkedin}
-                    className="text-gray-300 hover:text-emerald-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-yellow-500 transition-colors duration-300"
                     aria-label={`${teamMembers[1].name}'s LinkedIn`}
                     target="_blank"
                     rel="noopener noreferrer"
