@@ -3,13 +3,16 @@ import { motion } from 'framer-motion';
 import { Linkedin, Instagram } from "lucide-react";
 import Header from "../Home/Components/Header.jsx";
 import Footer from "../Home/Components/Footer.jsx";
+import saiImage from "../assets/sai.jpg"; // Import images
+import anirudhImage from "../assets/anirudh.jpg";
+import suriyaImage from "../assets/suriya.jpg";
 
 const OurTeam = () => {
   const teamMembers = [
     {
       name: "Sai Prashanth",
       role: "Founding President",
-      image: "/src/assets/sai.jpg", // Top grid image - sai.jpg
+      image: saiImage, // Use imported image
       bio: "The Wonder Boy, Coding Maven and Genius Mathematician.",
       instagram: "https://www.instagram.com/thesaiprashanth/",
       linkedin: "https://www.linkedin.com/in/thesaiprashanth/"
@@ -17,7 +20,7 @@ const OurTeam = () => {
     {
       name: "Sree Anirudh",
       role: "Head of Operations, Resources & Logistics",
-      image: "/src/assets/anirudh.jpg", // Left bottom - anirudh.jpg
+      image: anirudhImage, // Use imported image
       bio: "The Strategic Thinker, Effiency Expert and Logistics Guru.",
       instagram: "https://www.instagram.com/a.sree_anirudhan/",
       linkedin: "https://www.linkedin.com/in/sree-anirudh-alwar-0b6ba5334/"
@@ -25,7 +28,7 @@ const OurTeam = () => {
     {
       name: "Suriya",
       role: "Head of Management",
-      image: "/src/assets/suriya.jpg", // Right bottom - suriya.jpg
+      image: suriyaImage, // Use imported image
       bio: "The Meticulous Planner, Marketing Maestro and Management Maverick.",
       instagram: "https://www.instagram.com/ad__suriya/",
       linkedin: "https://www.linkedin.com/in/ad-suriya-5465b0298/?originalSubdomain=in"
