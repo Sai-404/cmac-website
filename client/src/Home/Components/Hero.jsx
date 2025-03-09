@@ -43,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen w-full bg-orange-50 relative overflow-hidden flex items-center justify-center" style={{backgroundColor: '#fff9e5'}}>
+    <div className="h-screen w-full bg-[#FFF7ED] relative overflow-hidden flex items-center justify-center" style={{backgroundColor: '#FFF7ED'}}>
       <motion.div
         className="max-w-6xl mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 100 }}
