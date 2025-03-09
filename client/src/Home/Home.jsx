@@ -1,15 +1,12 @@
-import { motion } from "framer-motion";
 import React from "react";
 import Header from "./Components/Header.jsx";
 import Hero from "./Components/Hero.jsx";
 import '../index.css';
 import Footer from "./Components/Footer.jsx";
 import WhatsApp from "./Components/WhatsApp.jsx";
-import Numbers from "./Components/Numbers.jsx";
 import Features from "./Components/Features.jsx";
 import Testimonials from "./Components/Testimonials.jsx";
-import S1 from "./Components/S1.jsx";
-import S2 from "./Components/S2.jsx";
+import Events from "./Components/Events.jsx";
 import Blogs from "./Components/Blogs.jsx";
 import '../App.css';
 import Trusted from "./Components/Trusted.jsx";
@@ -21,12 +18,9 @@ const Home = () => {
         <Header/>
         <Hero/>
         <Trusted/>
-        {/* <Numbers/> */}
         <Features/>
-        <S1/>
-        <S2/>
+        <Events/>
         <Testimonials/>
-        {/* <Blogs/> */}
         <div className="my-8">
           <WhatsApp/>
         </div>

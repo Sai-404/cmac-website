@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import IB from '../../assets/INTEGRALBEE.jpg';
 import NH from '../../assets/NHLOGO.jpg';
 
-const S2 = () => {
+const Events = () => {
   const plans = [
     {
       name: "INTEGRAL BEE",
@@ -175,4 +175,4 @@ const S2 = () => {
   );
 };
 
-export default S2;
+export default Events;
