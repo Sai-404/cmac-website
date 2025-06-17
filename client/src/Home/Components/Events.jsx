@@ -20,11 +20,10 @@ const Events = () => {
       name: "NUMEROHACK",
       image: NH,
       features: [
-        { name: "NumeroHack will be an innovative, 5-hour, offline hackathon conducted by the Council for Mathematics and Advanced Computing as a part of Texus'25. It will challenge students to collaborate in pairs and use their mathematical and technical skills to develop creative solutions. This event will encourage teamwork, innovation, and the application of mathematical principles in a real-world, technical context. Participants will work on math-based projects, app development, or problem-solving tasks that require the application of algorithms, data analysis, and other mathematical concepts.", included: true },
+        { name: "NumeroHack was an innovative, 5-hour, offline hackathon conducted by the Council for Mathematics and Advanced Computing as a part of Texus'25. It challenged students to collaborate in pairs and use their mathematical and technical skills to develop creative solutions. The event encouraged teamwork, innovation, and the application of mathematical principles in a real-world, technical context. Participants worked on math-based projects, app development, or problem-solving tasks that required the application of algorithms, data analysis, and other mathematical concepts.", included: true },
       ],
       variant: "dark",
       bgColor: "bg-[#000000]",
-      upcoming: true,
       hideRegister: true,
     }
   ];
@@ -138,11 +137,6 @@ const Events = () => {
                 >
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-semibold">{plan.name}</h3>
-                    {plan.upcoming && (
-                      <span className="px-3 py-1 text-xs bg-[#CC0000] text-[#FFF7ED] rounded-full">
-                        UPCOMING
-                      </span>
-                    )}
                   </div>
                   {plan.image && (
                     <div className="mb-4">

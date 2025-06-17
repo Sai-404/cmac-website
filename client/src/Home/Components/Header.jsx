@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import './Header.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +21,7 @@ const Header = () => {
   }, []);
 
   const scrollToTop = () => {
-    navigate('/'); // Navigate to homepage
+    navigate('/');
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -58,7 +58,6 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Rest of the component remains unchanged */}
           {/* Desktop Navigation */}
           <nav className="hidden md:flex justify-center space-x-8">
             <Link to="/about" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
@@ -70,6 +69,9 @@ const Header = () => {
             <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
               Our Team
             </Link>
+            <Link to="/gallery" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
+              Gallery
+            </Link>
           </nav>
 
           {/* Desktop Apply Now Button */}
@@ -79,7 +81,6 @@ const Header = () => {
               className="px-4 py-1 rounded-full text-white font-bold relative overflow-hidden bg-[#0A1A1F] hover:bg-[#0A1A1F] transition-all duration-300"
             >
               <span className="relative z-10">Apply Now</span>
-              {/* Shimmer Effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-40 animate-shimmer"></span>
             </button>
           </div>
@@ -105,6 +106,9 @@ const Header = () => {
               </Link>
               <Link to="/ourTeam" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
                 Our Team
+              </Link>
+              <Link to="/gallery" className="text-black hover:text-gray-600 transition-colors duration-200 font-bold">
+                Gallery
               </Link>
               <button
                 onClick={handleApplyNow}
