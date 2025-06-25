@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import IB from '../../assets/INTEGRALBEE.jpg';
 import NH from '../../assets/NHLOGO.jpg';
+import CV from '../../assets/CalcVerse.png';
 
 const Events = () => {
   const plans = [
@@ -25,6 +26,17 @@ const Events = () => {
       variant: "dark",
       bgColor: "bg-[#000000]",
       hideRegister: true,
+    },
+    {
+      name: "CALCVERSE",
+      image: CV,
+      features: [
+        { name: "CalcVerse is a one-round, all-in-one calculus challenge that brings together the most essential and exciting concepts of differential and integral calculus. Participants will face questions that assess both conceptual understanding and problem-solving speed. The event pays tribute to Leibniz, whose pioneering work laid the foundation for modern calculus. CalcVerse is designed to spark enthusiasm, recognize talent, and celebrate mathematical thought.", included: true },
+      ],
+      variant: "light",
+      bgColor: "bg-[#C1FF72]",
+      hideRegister: false,
+      isUpcoming: true,
     }
   ];
 
@@ -112,7 +124,7 @@ const Events = () => {
         {/* Centered Grid with Animation */}
         <div className="flex justify-center">
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -133,14 +145,21 @@ const Events = () => {
                 <div
                   className={`rounded-3xl p-8 ${plan.bgColor} ${
                     plan.variant === "dark" ? "text-white" : "text-slate-900"
-                  }`}
+                  } relative`}
                 >
+                  {plan.isUpcoming && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-[#AD0000] text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+                        Upcoming
+                      </span>
+                    </div>
+                  )}
                   <div className="flex justify-between items-center mb-4">
                     <h3 className="text-xl font-semibold">{plan.name}</h3>
                   </div>
                   {plan.image && (
                     <div className="mb-4">
-                      <img src={plan.image} alt={plan.name} className="w-full h-48 object-contain rounded-lg" />
+                      <img src={plan.image} alt={plan.name} className="w-full h-48 object-cover rounded-lg" />
                     </div>
                   )}
                 </div>
