@@ -3,13 +3,23 @@ import React, { useState } from 'react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
+      name: "DR. R. SRINIVASAN",
+      profession: "Associate Professor & Head (I/C), Department of Mathematics, SRM Institute of Science and Technology, Ramapuram, Chennai",
+      text: "CMAC has consistently provided a platform where academic knowledge meets practical application. As an educator, it is rewarding to see students immerse themselves in mathematical and computational thinking through CMAC’s well-structured initiatives. The council’s focus on real-world problem-solving, collaboration, and continuous learning significantly enriches the educational environment at SRMIST."
+    },
+    {
+      name: "DR. PREMA SEKAR",
+      profession: "Assistant Professor of Mathematics Department SRMIST, Coordinating Faculty of CMAC",
+      text: "CMAC plays a pivotal role in fostering mathematical and computational excellence at SRMIST. Its initiatives empower students to apply theoretical knowledge to practical challenges, creating a vibrant and innovative learning environment."
+    },
+    {
       name: "DR. SHAKEELA SATHISH",
-      profession: "HOD OF MATHEMATICS DEPARTMENT SRMIST",
+      profession: "Former HOD OF MATHEMATICS DEPARTMENT SRMIST",
       text: "I am delighted to commend the Council for Mathematics and Advanced Computing (CMAC) for its exceptional efforts in promoting mathematical excellence and computational innovation at SRMIST. Through workshops, hackathons, and research-driven projects, CMAC provides students with invaluable opportunities to bridge theory with real-world applications. Its commitment to fostering problem-solving skills and interdisciplinary learning is truly commendable."
     },
     {
       name: "DR. GURUSWAMY ARUMUGAM",
-      profession: "ASSISTANT PROFESSOR OF MATHEMATICS DEPARTMENT SRMIST, Coordinating Faculty of CMAC",
+      profession: "Former ASSISTANT PROFESSOR OF MATHEMATICS DEPARTMENT SRMIST, Former Coordinating Faculty of CMAC",
       text: "CMAC has been instrumental in nurturing analytical thinking and computational skills among students at SRMIST. Its initiatives create a dynamic learning environment that bridges mathematics with real-world applications."
     }
   ];
