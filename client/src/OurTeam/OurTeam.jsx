@@ -19,7 +19,7 @@ const OurTeam = () => {
     },
     {
       name: "Sree Anirudh",
-      role: "Vice President",
+      role: "Head of Operations",
       image: anirudhImage, // Use imported image
       bio: "The Strategic Thinker, Effiency Expert and Logistics Guru.",
       instagram: "https://www.instagram.com/a.sree_anirudhan/",

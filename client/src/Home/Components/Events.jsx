@@ -11,7 +11,10 @@ const Events = () => {
       name: "INTEGRAL BEE",
       image: IB,
       features: [
-        { name: "The Integral Bee was a mathematics competition conducted by CMAC on the 23rd of December, where participants demonstrated their skills in solving integrals, ranging from basic concepts to advanced techniques. This event was designed to challenge students' calculus knowledge, encourage quick thinking, and celebrate mathematical problem-solving in honor of Srinivasa Ramanujan, whose work greatly influenced the field.", included: true },
+        {
+          name: "The Integral Bee was a mathematics competition conducted by CMAC on the 23rd of December, where participants demonstrated their skills in solving integrals, ranging from basic concepts to advanced techniques. This event was designed to challenge students' calculus knowledge, encourage quick thinking, and celebrate mathematical problem-solving in honor of Srinivasa Ramanujan, whose work greatly influenced the field.",
+          included: true
+        },
       ],
       variant: "light",
       bgColor: "bg-[#FFDE59]",
@@ -21,7 +24,10 @@ const Events = () => {
       name: "NUMEROHACK",
       image: NH,
       features: [
-        { name: "NumeroHack was an innovative, 5-hour, offline hackathon conducted by the Council for Mathematics and Advanced Computing as a part of Texus'25. It challenged students to collaborate in pairs and use their mathematical and technical skills to develop creative solutions. The event encouraged teamwork, innovation, and the application of mathematical principles in a real-world, technical context. Participants worked on math-based projects, app development, or problem-solving tasks that required the application of algorithms, data analysis, and other mathematical concepts.", included: true },
+        {
+          name: "NumeroHack was an innovative, 5-hour, offline hackathon conducted by the Council for Mathematics and Advanced Computing as a part of Texus'25. It challenged students to collaborate in pairs and use their mathematical and technical skills to develop creative solutions. The event encouraged teamwork, innovation, and the application of mathematical principles in a real-world, technical context. Participants worked on math-based projects, app development, or problem-solving tasks that required the application of algorithms, data analysis, and other mathematical concepts.",
+          included: true
+        },
       ],
       variant: "dark",
       bgColor: "bg-[#000000]",
@@ -31,12 +37,15 @@ const Events = () => {
       name: "CALCVERSE",
       image: CV,
       features: [
-        { name: "CalcVerse is a one-round, all-in-one calculus challenge that brings together the most essential and exciting concepts of differential and integral calculus. Participants will face questions that assess both conceptual understanding and problem-solving speed. The event pays tribute to Leibniz, whose pioneering work laid the foundation for modern calculus. CalcVerse is designed to spark enthusiasm, recognize talent, and celebrate mathematical thought.", included: true },
+        {
+          name: "CalcVerse is a one-round, all-in-one calculus challenge that brings together the most essential and exciting concepts of differential and integral calculus. Participants will face questions that assess both conceptual understanding and problem-solving speed. The event pays tribute to Leibniz, whose pioneering work laid the foundation for modern calculus. CalcVerse is designed to spark enthusiasm, recognize talent, and celebrate mathematical thought.",
+          included: true
+        },
       ],
       variant: "light",
       bgColor: "bg-[#C1FF72]",
       hideRegister: false,
-      isUpcoming: true,
+      isUpcoming: false, // Updated to reflect that CalcVerse is over
     }
   ];
 
